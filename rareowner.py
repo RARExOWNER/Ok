@@ -18,7 +18,7 @@ import psutil
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '7122369335:AAFn0pwvqtQBhgvn5xgXiD4pcewJqg9_rCk'
+TOKEN = '7558936416:AAE4fhfbDXzg5i6vhj0FDL4wUJAlxSfw8eI'
 MONGO_URI = 'mongodb+srv://rolex:rolex@rolexowner.csjfh.mongodb.net/?retryWrites=true&w=majority&appName=ROLEXOWNER'
 FORWARD_CHANNEL_ID = -1002171264563
 CHANNEL_ID = -1002171264563
